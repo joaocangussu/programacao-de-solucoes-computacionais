@@ -17,30 +17,35 @@ public class Aluno {
 		
 		System.out.println("Informe a nota da A3:");
 		a3 = input.nextInt();
-		
-		System.out.println("Informe a porcentagem de faltas:");
-		faltas = input.nextInt();
-	
-		notaFinal = (a1 + a2 + a3);
-		
-		System.out.printf("(>) Nota Final: %.2f %n" +notaFinal);
-		System.out.println("(<) Faltas: " +faltas);
-		
-		//Para que o aluno seja APROVADO, deve ter nota maior ou igual a 70
-		//e menos que 20% de faltas
-		
-		//Para que o aluno tenha direito a RECUPERAÇÃO, deve ter a nota maior
-		//ou igual a 40 e menos que 20% de faltas
-		
-		//Para que o aluno seja REPROVADO, ele deve ter uma nota menor que 40 ou
-		//mais que 20% de faltas
-		
-		if(notaFinal >= 70 && faltas < 20) {
-			System.out.println("Parabens, foi aprovado!!");
-			}else if(notaFinal >= 40 && faltas < 20) {
+
+		if(a1>30 || a2>30 || a3>40) {
+			System.out.println("Error.");
+			System.out.println("Valor inválido.");
+		} else {
+			System.out.println("Informe a porcentagem de faltas:");
+			faltas = input.nextInt();
+
+			notaFinal = (a1 + a2 + a3);
+
+			System.out.printf("(>) Nota Final: %.2f %n", notaFinal);
+			System.out.println("(<) Faltas: " + faltas);
+
+			//Para que o aluno seja APROVADO, deve ter nota maior ou igual a 70
+			//e menos que 20% de faltas
+
+			//Para que o aluno tenha direito a RECUPERAÇÃO, deve ter a nota maior
+			//ou igual a 40 e menos que 20% de faltas
+
+			//Para que o aluno seja REPROVADO, ele deve ter uma nota menor que 40 ou
+			//mais que 20% de faltas
+
+			if (notaFinal >= 70 && faltas < 20) {
+				System.out.println("Parabens, foi aprovado!!");
+			} else if (notaFinal >= 40 && faltas < 20) {
 				System.out.println("Reprovado, porem com direito a recuperacao.");
-		}else{
-			System.out.println("Infelizmente, reprovado sem direito a recuperacao.");
+			} else {
+				System.out.println("Infelizmente, reprovado sem direito a recuperacao.");
+			}
 		}
 	}
 }
