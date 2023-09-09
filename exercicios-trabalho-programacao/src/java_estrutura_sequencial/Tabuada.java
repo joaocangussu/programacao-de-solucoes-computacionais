@@ -8,7 +8,7 @@ public class Tabuada {
 		for (int i = 0; i <= 10; i++) {
 			int resultado = numero * i;
 			System.out.println(numero + " X " + i + " = " + resultado);
-			System.exit(0);
+			
 			
 		}
 	}

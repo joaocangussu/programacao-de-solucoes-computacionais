@@ -13,7 +13,7 @@ public class TabuadaDialogo {
 			int resultado = numero * i;
 			tabuada.append(numero).append(" X ").append(i).append(" = ").append(resultado).append("\n");
 			 JOptionPane.showMessageDialog(null, tabuada.toString(), "Tabuada", JOptionPane.INFORMATION_MESSAGE);
-			 System.exit(0);
+			 
 		}
 
 	}
